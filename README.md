@@ -13,16 +13,22 @@ Please also take some time to take a look at our other applications on our websi
 The Unity package of UnityGB can be downloaded [here](https://bitbucket.org/takohi/unitygb/downloads/unitygb-0.22.unitypackage).
 
 ## Compatibilities
+
 ### What is supported
+
 * Game Boy games with cartridge <= MBC5
 * Input
 * Sound
 * Save (save files are compatible with Visual Boy Advance and other emulators)
+
 ### Planned features
+
 * Game Boy Color compatibility
 * Link Cable
 * Oculus Rift
+
 ### Known issues
+
 * Sound synchronization
 * Pokemon Yellow: Pikachu voices are not played
 * Some glitches with sprites order
