@@ -34,20 +34,18 @@ The Unity package of UnityGB can be downloaded [here](https://bitbucket.org/tako
 * Some glitches with sprites order
 
 ## Demonstrations
-**Official Web Demo**, by [Takohi](http://www.takohi.com)
+**Official Web Demo**, by [Takohi](http://www.takohi.com)  
 [![Official Demo](https://bitbucket.org/repo/8MjKzK/images/2954418396-unitygb_demo_screenshot_2.png)](http://www.takohi.com/data/unity/unitygb/ "Official Demo")
 
-**Oculus Rift Gameboy Emulator in Unity**, by [Shane O'Brien](https://www.youtube.com/channel/UCOQ0p9uyXP1p5FVUQ5083XA)
+**Oculus Rift Gameboy Emulator in Unity**, by [Shane O'Brien](http://www.youtube.com/watch?v=wby8pMrYYaM)  
 [![Oculus Rift Gameboy Emulator in Unity](http://img.youtube.com/vi/wby8pMrYYaM/0.jpg)](http://www.youtube.com/watch?v=wby8pMrYYaM "Oculus Rift Gameboy Emulator in Unity")
 
-**UnityGB4BB10, GameBoy Emulator for BlackBerry 10**
+**UnityGB4BB10, GameBoy Emulator for BlackBerry 10**  
 [![UnityGB4BB10](http://www.filearchivehaven.com/wp-content/uploads/2014/08/UnityGB4BB-Games-1024x576.png)](http://www.filearchivehaven.com/2014/08/17/proud-to-announce-another-gameboy-emulator-for-blackberry-10-unitygb4bb10/ "UnityGB4BB10")
 
 ## Usage
 **UnityGB** can work in several ways. What you have to do is to make your own implementation about how to manage inputs (controls) and outputs (video and sound).
 In the Unity package and the sources, you will already find one classic scene outputing the video in a classic texture, the audio trough the [OnAudioFilterRead](http://docs.unity3d.com/Documentation/ScriptReference/MonoBehaviour.OnAudioFilterRead.html) method, and joypad input from the keyboard.
-
->> [UnityGB package can be downloaded here](https://bitbucket.org/takohi/unitygb/downloads/unitygb.unitypackage)
 
 ### Joypad
 
@@ -55,20 +53,16 @@ An example of how to implement the controls can be found in *DefaultEmulatorMana
 
 When you want to emulate an input from the player into the game, you just have to call the *SetInput* method from the emulator reference:
 ```
-#!c#
 void SetInput(Button button, bool pressed);
 ```
 Button is an enum with these values:
 
 ```
-#!c#
 public enum Button {Up, Down, Left, Right, A, B, Start, Select};
 ```
 For example, if you want to press the button start when the player is hitting the space button:
 
 ```
-#!c#
-
 if(Input.GetKeyDown(KeyCode.Space))
     Emulator.SetInput(EmulatorBase.Button.Start, true);
 else if(Input.GetKeyUp(KeyCode.Space))
@@ -84,7 +78,6 @@ In order to output the video from the emulator or in other words, to display the
 This interface has only two methods:
 
 ```
-#!c#
 void SetSize(int w, int h);
 void SetPixels(uint[] colors);
 
@@ -97,8 +90,6 @@ The method *SetPixels* will be called every time the frame has been updated. As 
 Here is a method to convert a uint color into a Unity color:
 
 ```
-#!c#
-
 private Color UIntToColor(uint color)
 {
     byte a = (byte)(color >> 24);
@@ -113,7 +104,7 @@ private Color UIntToColor(uint color)
 
 An example of how to implement the audio can be found in *DefaultAudioOutput.cs*.
 
-With Unity 4, the only way to dynamically produce audio is by using the method [OnAudioFilterRead(float[] data, int channels)](https://docs.unity3d.com/Documentation/ScriptReference/MonoBehaviour.OnAudioFilterRead.html) from a *MonoBehaviour* object.
+With Unity, the only way to dynamically produce audio is by using the method [OnAudioFilterRead(float[] data, int channels)](https://docs.unity3d.com/Documentation/ScriptReference/MonoBehaviour.OnAudioFilterRead.html) from a *MonoBehaviour* object.
 
 In the package, we already provide a way to produce the audio trough the *DefaultAudioOutput* class. If you want to use it, just attach that script to a game object and add to it an *AudioSource* component.
 
@@ -121,7 +112,6 @@ If you still want to make your own implementation for outputing audio, you will 
 
 This interface has three methods:
 ```
-#!c#
 int GetOutputSampleRate();
 int GetSamplesAvailable();
 void Play(byte[] data, int offset, int count);
@@ -142,7 +132,6 @@ In order to manage save files, you will have to make your own class implementing
 This interface has only two methods:
 
 ```
-#!c#
 void Save(string name, byte[] data);
 byte[] Load(string name);
 ```
@@ -160,7 +149,6 @@ The code below is a simple way showing how to initialize and make run UnityGB wi
 First, we create an instance of the emulator and load the ROM in the *Start* method.
 
 ```
-#!c#
 void Start()
 {
     // Load emulator
@@ -176,7 +164,6 @@ void Start()
 Then we make the emulator running during the *Update* method of the *MonoBehaviour*. We also use this method to manage inputs from the user and send them to the emulator.
 
 ```
-#!c#
 void Update()
 {
     // Input
