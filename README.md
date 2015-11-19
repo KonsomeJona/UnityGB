@@ -7,10 +7,7 @@ UnityGB became the main subject of several articles like [CNET, Gameboy emulator
 
 UnityGB is still in alpha version, many bugs and glitches can occur. Also, the code is far from being perfect and needs a lot of optimization. Any and all help welcome! Please feel free to contribute to this project.
 
-Please also take some time to take a look at our other applications on our website [Takohi](Takohi). :+1:
-
-## Unity package
-The Unity package of UnityGB can be downloaded [here](https://bitbucket.org/takohi/unitygb/downloads/unitygb-0.22.unitypackage).
+Please also take some time to take a look at our other applications on our website [Takohi.com](http://www.takohi.com) and our other [Unity assets](https://www.assetstore.unity3d.com/en/?gclid=CjwKEAjwuoOpBRCSy6yQm66J1g8SJABrXW48qCgi3rfBrvrAQu55uQeS0U3YH51O-Ybf6N1ZDwJVQRoCqBrw_wcB#!/search/page=1/sortby=popularity/query=publisher:4241). :+1:
 
 ## Compatibilities
 
