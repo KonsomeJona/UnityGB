@@ -31,14 +31,18 @@ Please also take some time to take a look at our other applications on our websi
 * Some glitches with sprites order
 
 ## Demonstrations
-**Official Web Demo**, by [Takohi](http://www.takohi.com)  
-[![Official Demo](https://bitbucket.org/repo/8MjKzK/images/2954418396-unitygb_demo_screenshot_2.png)](http://www.takohi.com/data/unity/unitygb/ "Official Demo")
+
+**Hilarious Gameboy Emulator with Leap Motion in Unity**, by [Pierce Wolcott](https://piercewolcott.com/)  
+[![Gameboy Emulator with Leap Motion in Unity](https://i.vimeocdn.com/video/514669012_590x332.jpg)](https://vimeo.com/124805471 "Leap Boy")
 
 **Oculus Rift Gameboy Emulator in Unity**, by [Shane O'Brien](http://www.youtube.com/watch?v=wby8pMrYYaM)  
 [![Oculus Rift Gameboy Emulator in Unity](http://img.youtube.com/vi/wby8pMrYYaM/0.jpg)](http://www.youtube.com/watch?v=wby8pMrYYaM "Oculus Rift Gameboy Emulator in Unity")
 
 **UnityGB4BB10, GameBoy Emulator for BlackBerry 10**  
 [![UnityGB4BB10](http://www.filearchivehaven.com/wp-content/uploads/2014/08/UnityGB4BB-Games-1024x576.png)](http://www.filearchivehaven.com/2014/08/17/proud-to-announce-another-gameboy-emulator-for-blackberry-10-unitygb4bb10/ "UnityGB4BB10")
+
+**Official Web Demo**, by [Takohi](http://www.takohi.com)  
+[![Official Demo](https://bitbucket.org/repo/8MjKzK/images/2954418396-unitygb_demo_screenshot_2.png)](http://www.takohi.com/data/unity/unitygb/ "Official Demo")
 
 ## Usage
 **UnityGB** can work in several ways. What you have to do is to make your own implementation about how to manage inputs (controls) and outputs (video and sound).
