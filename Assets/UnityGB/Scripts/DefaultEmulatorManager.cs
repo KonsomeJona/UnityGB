@@ -76,10 +76,10 @@ public class DefaultEmulatorManager : MonoBehaviour
 			yield break;
 		}
 
-		WWW www = new WWW("file:///" + path);
+		WWW www = new WWW("file://" + path);
 		yield return www;
 
-		if (www.error == null)
+		if (string.IsNullOrEmpty(www.error))
 		{
 			Emulator.LoadRom(www.bytes);
 			StartCoroutine(Run());
